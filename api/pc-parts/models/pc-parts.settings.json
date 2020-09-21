@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Components",
+  "info": {
+    "name": "PcParts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Dec": {
+      "type": "richtext",
+      "required": true,
+      "private": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "amds": {
+      "collection": "amd",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "intels": {
+      "collection": "intel",
+      "via": "pc_parts",
+      "dominant": true
+    }
+  }
+}

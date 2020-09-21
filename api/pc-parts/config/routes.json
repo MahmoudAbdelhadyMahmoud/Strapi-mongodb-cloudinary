@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pc-parts",
+      "handler": "pc-parts.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pc-parts/count",
+      "handler": "pc-parts.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pc-parts/:id",
+      "handler": "pc-parts.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pc-parts",
+      "handler": "pc-parts.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pc-parts/:id",
+      "handler": "pc-parts.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pc-parts/:id",
+      "handler": "pc-parts.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

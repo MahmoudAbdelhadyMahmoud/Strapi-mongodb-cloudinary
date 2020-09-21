@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "intel",
   "info": {
-    "name": "category"
+    "name": "Intel"
   },
   "options": {
     "increments": true,
@@ -14,19 +14,17 @@
       "required": true,
       "unique": true
     },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
+    "intel": {
+      "type": "enumeration",
+      "enum": [
+        "i9",
+        "i7",
+        "i5",
+        "i3"
+      ]
     },
     "pc_parts": {
-      "via": "categories",
+      "via": "intels",
       "collection": "pc-parts"
     }
   }

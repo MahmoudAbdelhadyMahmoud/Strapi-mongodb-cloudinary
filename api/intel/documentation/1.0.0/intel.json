@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/intels": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Intel"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Intel"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewIntel"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/intels/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/intels/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Intel"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Intel"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewIntel"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Intel"
         ],
         "parameters": [
           {
@@ -514,11 +514,10 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Intel": {
         "required": [
           "id",
-          "title",
-          "images"
+          "title"
         ],
         "properties": {
           "id": {
@@ -527,69 +526,14 @@
           "title": {
             "type": "string"
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
+          "intel": {
+            "type": "string",
+            "enum": [
+              "i9",
+              "i7",
+              "i5",
+              "i3"
+            ]
           },
           "pc_parts": {
             "type": "array",
@@ -639,13 +583,22 @@
           }
         }
       },
-      "NewCategory": {
+      "NewIntel": {
         "required": [
           "title"
         ],
         "properties": {
           "title": {
             "type": "string"
+          },
+          "intel": {
+            "type": "string",
+            "enum": [
+              "i9",
+              "i7",
+              "i5",
+              "i3"
+            ]
           },
           "pc_parts": {
             "type": "array",
@@ -659,7 +612,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Intel"
     }
   ]
 }

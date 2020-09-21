@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "amds",
   "info": {
-    "name": "category"
+    "name": "AMD"
   },
   "options": {
     "increments": true,
@@ -14,19 +14,17 @@
       "required": true,
       "unique": true
     },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
+    "Choose": {
+      "type": "enumeration",
+      "enum": [
+        "Ryzen9",
+        "Ryzen7",
+        "Ryzen5",
+        "Ryzen3"
+      ]
     },
     "pc_parts": {
-      "via": "categories",
+      "via": "amds",
       "collection": "pc-parts"
     }
   }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/amds": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Amd"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Amd"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewAmd"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/amds/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/amds/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Amd"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Amd"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewAmd"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Amd"
         ],
         "parameters": [
           {
@@ -514,11 +514,10 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Amd": {
         "required": [
           "id",
-          "title",
-          "images"
+          "title"
         ],
         "properties": {
           "id": {
@@ -527,69 +526,14 @@
           "title": {
             "type": "string"
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
+          "Choose": {
+            "type": "string",
+            "enum": [
+              "Ryzen9",
+              "Ryzen7",
+              "Ryzen5",
+              "Ryzen3"
+            ]
           },
           "pc_parts": {
             "type": "array",
@@ -639,13 +583,22 @@
           }
         }
       },
-      "NewCategory": {
+      "NewAmd": {
         "required": [
           "title"
         ],
         "properties": {
           "title": {
             "type": "string"
+          },
+          "Choose": {
+            "type": "string",
+            "enum": [
+              "Ryzen9",
+              "Ryzen7",
+              "Ryzen5",
+              "Ryzen3"
+            ]
           },
           "pc_parts": {
             "type": "array",
@@ -659,7 +612,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Amd"
     }
   ]
 }
