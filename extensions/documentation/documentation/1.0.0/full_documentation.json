@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/21/2020 6:15:06 AM"
+    "x-generation-date": "09/21/2020 6:36:29 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5398,13 +5398,7 @@
       "Brands": {
         "required": [
           "id",
-          "title",
-          "brandcpu",
-          "brandmotherdborad",
-          "brandRam",
-          "brandcase",
-          "brandstorge",
-          "brandHeadsets"
+          "title"
         ],
         "properties": {
           "id": {
@@ -5412,133 +5406,6 @@
           },
           "title": {
             "type": "string"
-          },
-          "brandcpu": {
-            "type": "string",
-            "enum": [
-              "AMD",
-              "intel"
-            ]
-          },
-          "brandmotherdborad": {
-            "type": "string",
-            "enum": [
-              "ASRock",
-              "ASUS",
-              "Gigabyte",
-              "MSI"
-            ]
-          },
-          "brandRam": {
-            "type": "string",
-            "enum": [
-              "Adata",
-              "Corsair",
-              "Crucial",
-              "GSkill",
-              "Gigabyte",
-              "Kingston",
-              "TeamGroup"
-            ]
-          },
-          "brandgpu": {
-            "type": "string",
-            "enum": [
-              "AMD",
-              "ASUS",
-              "Gigabyte",
-              "MSI",
-              "Sapphire",
-              "XFX",
-              "Zotac",
-              "Nivdia"
-            ]
-          },
-          "brandcase": {
-            "type": "string",
-            "enum": [
-              "Bitfenix",
-              "Cougar",
-              "Deepcool",
-              "GAMDIAS",
-              "Gigabyte",
-              "MSI",
-              "NZXT",
-              "RAIDMAX",
-              "Thermaltake"
-            ]
-          },
-          "brandstorge": {
-            "type": "string",
-            "enum": [
-              "Adata",
-              "Crucial",
-              "Gigabyte",
-              "Kingston",
-              "Lexar",
-              "QNAP",
-              "Samsung",
-              "Seagate",
-              "TeamGroup",
-              "Transcend",
-              "WesternDigital"
-            ]
-          },
-          "brandHeadsets": {
-            "type": "string",
-            "enum": [
-              "A4tech",
-              "Gigabyte",
-              "HEC",
-              "Kingston",
-              "Logitech",
-              "Microsoft",
-              "MSI",
-              "rapoo",
-              "Redragon"
-            ]
-          },
-          "brandlabtops": {
-            "type": "string",
-            "enum": [
-              "Acer",
-              "Apple",
-              "ASUS",
-              "Dell",
-              "HP",
-              "Lenovo",
-              "MSI",
-              "Toshiba"
-            ]
-          },
-          "coolingSystem": {
-            "type": "string",
-            "enum": [
-              "ASUS",
-              "Bitfenix",
-              "CoolerMaster",
-              "Cougar",
-              "GAMDIAS",
-              "Gigabyte",
-              "MSI",
-              "NZXT",
-              "RAIDMAX",
-              "Thermaltake"
-            ]
-          },
-          "brandpowerSupply": {
-            "type": "string",
-            "enum": [
-              "Bitfenix",
-              "CoolerMaster",
-              "Corsair",
-              "Cougar",
-              "Gigabyte",
-              "HEC",
-              "RAIDMAX",
-              "Seasonic",
-              "Thermaltake"
-            ]
           },
           "laptop_parts": {
             "type": "array",
@@ -5636,144 +5503,11 @@
       },
       "NewBrands": {
         "required": [
-          "title",
-          "brandcpu",
-          "brandmotherdborad",
-          "brandRam",
-          "brandcase",
-          "brandstorge",
-          "brandHeadsets"
+          "title"
         ],
         "properties": {
           "title": {
             "type": "string"
-          },
-          "brandcpu": {
-            "type": "string",
-            "enum": [
-              "AMD",
-              "intel"
-            ]
-          },
-          "brandmotherdborad": {
-            "type": "string",
-            "enum": [
-              "ASRock",
-              "ASUS",
-              "Gigabyte",
-              "MSI"
-            ]
-          },
-          "brandRam": {
-            "type": "string",
-            "enum": [
-              "Adata",
-              "Corsair",
-              "Crucial",
-              "GSkill",
-              "Gigabyte",
-              "Kingston",
-              "TeamGroup"
-            ]
-          },
-          "brandgpu": {
-            "type": "string",
-            "enum": [
-              "AMD",
-              "ASUS",
-              "Gigabyte",
-              "MSI",
-              "Sapphire",
-              "XFX",
-              "Zotac",
-              "Nivdia"
-            ]
-          },
-          "brandcase": {
-            "type": "string",
-            "enum": [
-              "Bitfenix",
-              "Cougar",
-              "Deepcool",
-              "GAMDIAS",
-              "Gigabyte",
-              "MSI",
-              "NZXT",
-              "RAIDMAX",
-              "Thermaltake"
-            ]
-          },
-          "brandstorge": {
-            "type": "string",
-            "enum": [
-              "Adata",
-              "Crucial",
-              "Gigabyte",
-              "Kingston",
-              "Lexar",
-              "QNAP",
-              "Samsung",
-              "Seagate",
-              "TeamGroup",
-              "Transcend",
-              "WesternDigital"
-            ]
-          },
-          "brandHeadsets": {
-            "type": "string",
-            "enum": [
-              "A4tech",
-              "Gigabyte",
-              "HEC",
-              "Kingston",
-              "Logitech",
-              "Microsoft",
-              "MSI",
-              "rapoo",
-              "Redragon"
-            ]
-          },
-          "brandlabtops": {
-            "type": "string",
-            "enum": [
-              "Acer",
-              "Apple",
-              "ASUS",
-              "Dell",
-              "HP",
-              "Lenovo",
-              "MSI",
-              "Toshiba"
-            ]
-          },
-          "coolingSystem": {
-            "type": "string",
-            "enum": [
-              "ASUS",
-              "Bitfenix",
-              "CoolerMaster",
-              "Cougar",
-              "GAMDIAS",
-              "Gigabyte",
-              "MSI",
-              "NZXT",
-              "RAIDMAX",
-              "Thermaltake"
-            ]
-          },
-          "brandpowerSupply": {
-            "type": "string",
-            "enum": [
-              "Bitfenix",
-              "CoolerMaster",
-              "Corsair",
-              "Cougar",
-              "Gigabyte",
-              "HEC",
-              "RAIDMAX",
-              "Seasonic",
-              "Thermaltake"
-            ]
           },
           "laptop_parts": {
             "type": "array",
@@ -6204,49 +5938,13 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "brandcpu",
-                "brandmotherdborad",
-                "brandRam",
-                "brandcase",
-                "brandstorge",
-                "brandHeadsets"
+                "title"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "brandcpu": {
-                  "type": "string"
-                },
-                "brandmotherdborad": {
-                  "type": "string"
-                },
-                "brandRam": {
-                  "type": "string"
-                },
-                "brandgpu": {
-                  "type": "string"
-                },
-                "brandcase": {
-                  "type": "string"
-                },
-                "brandstorge": {
-                  "type": "string"
-                },
-                "brandHeadsets": {
-                  "type": "string"
-                },
-                "brandlabtops": {
-                  "type": "string"
-                },
-                "coolingSystem": {
-                  "type": "string"
-                },
-                "brandpowerSupply": {
                   "type": "string"
                 },
                 "laptop_parts": {
@@ -6463,49 +6161,13 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "brandcpu",
-                "brandmotherdborad",
-                "brandRam",
-                "brandcase",
-                "brandstorge",
-                "brandHeadsets"
+                "title"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "brandcpu": {
-                  "type": "string"
-                },
-                "brandmotherdborad": {
-                  "type": "string"
-                },
-                "brandRam": {
-                  "type": "string"
-                },
-                "brandgpu": {
-                  "type": "string"
-                },
-                "brandcase": {
-                  "type": "string"
-                },
-                "brandstorge": {
-                  "type": "string"
-                },
-                "brandHeadsets": {
-                  "type": "string"
-                },
-                "brandlabtops": {
-                  "type": "string"
-                },
-                "coolingSystem": {
-                  "type": "string"
-                },
-                "brandpowerSupply": {
                   "type": "string"
                 },
                 "laptop_parts": {

@@ -35,8 +35,8 @@
       "dominant": true
     },
     "brands": {
-      "collection": "brands",
       "via": "laptop_parts",
+      "collection": "brands",
       "dominant": true
     }
   }

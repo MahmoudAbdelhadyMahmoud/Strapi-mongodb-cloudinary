@@ -46,8 +46,8 @@
       "dominant": true
     },
     "brands": {
-      "collection": "brands",
       "via": "pc_parts",
+      "collection": "brands",
       "dominant": true
     }
   }

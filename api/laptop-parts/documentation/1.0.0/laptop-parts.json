@@ -649,49 +649,13 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "brandcpu",
-                "brandmotherdborad",
-                "brandRam",
-                "brandcase",
-                "brandstorge",
-                "brandHeadsets"
+                "title"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "brandcpu": {
-                  "type": "string"
-                },
-                "brandmotherdborad": {
-                  "type": "string"
-                },
-                "brandRam": {
-                  "type": "string"
-                },
-                "brandgpu": {
-                  "type": "string"
-                },
-                "brandcase": {
-                  "type": "string"
-                },
-                "brandstorge": {
-                  "type": "string"
-                },
-                "brandHeadsets": {
-                  "type": "string"
-                },
-                "brandlabtops": {
-                  "type": "string"
-                },
-                "coolingSystem": {
-                  "type": "string"
-                },
-                "brandpowerSupply": {
                   "type": "string"
                 },
                 "laptop_parts": {
