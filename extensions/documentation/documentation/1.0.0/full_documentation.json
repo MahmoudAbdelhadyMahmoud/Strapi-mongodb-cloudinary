@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/21/2020 4:59:17 AM"
+    "x-generation-date": "09/21/2020 6:15:06 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -541,6 +541,517 @@
         "summary": "",
         "tags": [
           "Amd"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/brands": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the brands's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve brands document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Brands"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new brands record",
+        "responses": {
+          "200": {
+            "description": "Retrieve brands document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Brands"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBrands"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/brands/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of brands documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve brands document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": []
+      }
+    },
+    "/brands/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one brands record",
+        "responses": {
+          "200": {
+            "description": "Retrieve brands document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Brands"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single brands record",
+        "responses": {
+          "200": {
+            "description": "Retrieve brands document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Brands"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBrands"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single brands record",
+        "responses": {
+          "200": {
+            "description": "deletes a single brands based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Brands"
         ],
         "parameters": [
           {
@@ -1563,6 +2074,530 @@
         "summary": "",
         "tags": [
           "Intel"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/laptop-parts": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the laptop-parts's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new laptop-parts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLaptop-parts"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/laptop-parts/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of laptop-parts documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
+        ],
+        "parameters": []
+      }
+    },
+    "/laptop-parts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one laptop-parts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single laptop-parts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLaptop-parts"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single laptop-parts record",
+        "responses": {
+          "200": {
+            "description": "deletes a single laptop-parts based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
         ],
         "parameters": [
           {
@@ -4323,6 +5358,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4345,6 +5386,400 @@
               "Ryzen5",
               "Ryzen3"
             ]
+          },
+          "pc_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Brands": {
+        "required": [
+          "id",
+          "title",
+          "brandcpu",
+          "brandmotherdborad",
+          "brandRam",
+          "brandcase",
+          "brandstorge",
+          "brandHeadsets"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "brandcpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "intel"
+            ]
+          },
+          "brandmotherdborad": {
+            "type": "string",
+            "enum": [
+              "ASRock",
+              "ASUS",
+              "Gigabyte",
+              "MSI"
+            ]
+          },
+          "brandRam": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Corsair",
+              "Crucial",
+              "GSkill",
+              "Gigabyte",
+              "Kingston",
+              "TeamGroup"
+            ]
+          },
+          "brandgpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "ASUS",
+              "Gigabyte",
+              "MSI",
+              "Sapphire",
+              "XFX",
+              "Zotac",
+              "Nivdia"
+            ]
+          },
+          "brandcase": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "Cougar",
+              "Deepcool",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandstorge": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Crucial",
+              "Gigabyte",
+              "Kingston",
+              "Lexar",
+              "QNAP",
+              "Samsung",
+              "Seagate",
+              "TeamGroup",
+              "Transcend",
+              "WesternDigital"
+            ]
+          },
+          "brandHeadsets": {
+            "type": "string",
+            "enum": [
+              "A4tech",
+              "Gigabyte",
+              "HEC",
+              "Kingston",
+              "Logitech",
+              "Microsoft",
+              "MSI",
+              "rapoo",
+              "Redragon"
+            ]
+          },
+          "brandlabtops": {
+            "type": "string",
+            "enum": [
+              "Acer",
+              "Apple",
+              "ASUS",
+              "Dell",
+              "HP",
+              "Lenovo",
+              "MSI",
+              "Toshiba"
+            ]
+          },
+          "coolingSystem": {
+            "type": "string",
+            "enum": [
+              "ASUS",
+              "Bitfenix",
+              "CoolerMaster",
+              "Cougar",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandpowerSupply": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "CoolerMaster",
+              "Corsair",
+              "Cougar",
+              "Gigabyte",
+              "HEC",
+              "RAIDMAX",
+              "Seasonic",
+              "Thermaltake"
+            ]
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "tite",
+                "parts",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tite": {
+                  "type": "string"
+                },
+                "parts": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "pc_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "Dec",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "Dec": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "amds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "intels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewBrands": {
+        "required": [
+          "title",
+          "brandcpu",
+          "brandmotherdborad",
+          "brandRam",
+          "brandcase",
+          "brandstorge",
+          "brandHeadsets"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "brandcpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "intel"
+            ]
+          },
+          "brandmotherdborad": {
+            "type": "string",
+            "enum": [
+              "ASRock",
+              "ASUS",
+              "Gigabyte",
+              "MSI"
+            ]
+          },
+          "brandRam": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Corsair",
+              "Crucial",
+              "GSkill",
+              "Gigabyte",
+              "Kingston",
+              "TeamGroup"
+            ]
+          },
+          "brandgpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "ASUS",
+              "Gigabyte",
+              "MSI",
+              "Sapphire",
+              "XFX",
+              "Zotac",
+              "Nivdia"
+            ]
+          },
+          "brandcase": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "Cougar",
+              "Deepcool",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandstorge": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Crucial",
+              "Gigabyte",
+              "Kingston",
+              "Lexar",
+              "QNAP",
+              "Samsung",
+              "Seagate",
+              "TeamGroup",
+              "Transcend",
+              "WesternDigital"
+            ]
+          },
+          "brandHeadsets": {
+            "type": "string",
+            "enum": [
+              "A4tech",
+              "Gigabyte",
+              "HEC",
+              "Kingston",
+              "Logitech",
+              "Microsoft",
+              "MSI",
+              "rapoo",
+              "Redragon"
+            ]
+          },
+          "brandlabtops": {
+            "type": "string",
+            "enum": [
+              "Acer",
+              "Apple",
+              "ASUS",
+              "Dell",
+              "HP",
+              "Lenovo",
+              "MSI",
+              "Toshiba"
+            ]
+          },
+          "coolingSystem": {
+            "type": "string",
+            "enum": [
+              "ASUS",
+              "Bitfenix",
+              "CoolerMaster",
+              "Cougar",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandpowerSupply": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "CoolerMaster",
+              "Corsair",
+              "Cougar",
+              "Gigabyte",
+              "HEC",
+              "RAIDMAX",
+              "Seasonic",
+              "Thermaltake"
+            ]
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "pc_parts": {
             "type": "array",
@@ -4473,6 +5908,52 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "tite",
+                "parts",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tite": {
+                  "type": "string"
+                },
+                "parts": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4488,6 +5969,12 @@
             "type": "string"
           },
           "pc_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "laptop_parts": {
             "type": "array",
             "items": {
               "type": "string"
@@ -4558,6 +6045,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4582,6 +6075,216 @@
             ]
           },
           "pc_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Laptop-parts": {
+        "required": [
+          "id",
+          "tite",
+          "parts",
+          "image"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tite": {
+            "type": "string"
+          },
+          "parts": {
+            "type": "string"
+          },
+          "image": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "images"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "brands": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "brandcpu",
+                "brandmotherdborad",
+                "brandRam",
+                "brandcase",
+                "brandstorge",
+                "brandHeadsets"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "brandcpu": {
+                  "type": "string"
+                },
+                "brandmotherdborad": {
+                  "type": "string"
+                },
+                "brandRam": {
+                  "type": "string"
+                },
+                "brandgpu": {
+                  "type": "string"
+                },
+                "brandcase": {
+                  "type": "string"
+                },
+                "brandstorge": {
+                  "type": "string"
+                },
+                "brandHeadsets": {
+                  "type": "string"
+                },
+                "brandlabtops": {
+                  "type": "string"
+                },
+                "coolingSystem": {
+                  "type": "string"
+                },
+                "brandpowerSupply": {
+                  "type": "string"
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewLaptop-parts": {
+        "required": [
+          "tite",
+          "parts"
+        ],
+        "properties": {
+          "tite": {
+            "type": "string"
+          },
+          "parts": {
+            "type": "string"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "brands": {
             "type": "array",
             "items": {
               "type": "string"
@@ -4693,6 +6396,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4748,6 +6457,71 @@
                 }
               }
             }
+          },
+          "brands": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "brandcpu",
+                "brandmotherdborad",
+                "brandRam",
+                "brandcase",
+                "brandstorge",
+                "brandHeadsets"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "brandcpu": {
+                  "type": "string"
+                },
+                "brandmotherdborad": {
+                  "type": "string"
+                },
+                "brandRam": {
+                  "type": "string"
+                },
+                "brandgpu": {
+                  "type": "string"
+                },
+                "brandcase": {
+                  "type": "string"
+                },
+                "brandstorge": {
+                  "type": "string"
+                },
+                "brandHeadsets": {
+                  "type": "string"
+                },
+                "brandlabtops": {
+                  "type": "string"
+                },
+                "coolingSystem": {
+                  "type": "string"
+                },
+                "brandpowerSupply": {
+                  "type": "string"
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -4776,6 +6550,12 @@
             }
           },
           "intels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "brands": {
             "type": "array",
             "items": {
               "type": "string"
@@ -5098,6 +6878,9 @@
   "tags": [
     {
       "name": "Amd"
+    },
+    {
+      "name": "Brands"
     },
     {
       "name": "Category"

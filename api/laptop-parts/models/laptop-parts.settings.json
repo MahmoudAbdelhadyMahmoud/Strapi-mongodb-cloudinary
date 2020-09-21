@@ -1,23 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "Components",
+  "collectionName": "laptop_parts",
   "info": {
-    "name": "PcParts"
+    "name": "LaptopParts"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "tite": {
       "type": "string",
-      "unique": true,
-      "required": true
-    },
-    "Dec": {
-      "type": "richtext",
       "required": true,
-      "private": true
+      "unique": true
+    },
+    "parts": {
+      "type": "richtext",
+      "required": true
     },
     "image": {
       "collection": "file",
@@ -32,22 +31,12 @@
     },
     "categories": {
       "collection": "category",
-      "via": "pc_parts",
-      "dominant": true
-    },
-    "amds": {
-      "collection": "amd",
-      "via": "pc_parts",
-      "dominant": true
-    },
-    "intels": {
-      "collection": "intel",
-      "via": "pc_parts",
+      "via": "laptop_parts",
       "dominant": true
     },
     "brands": {
       "collection": "brands",
-      "via": "pc_parts",
+      "via": "laptop_parts",
       "dominant": true
     }
   }

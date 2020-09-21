@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/laptop-parts",
+      "handler": "laptop-parts.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/laptop-parts/count",
+      "handler": "laptop-parts.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/laptop-parts/:id",
+      "handler": "laptop-parts.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/laptop-parts",
+      "handler": "laptop-parts.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/laptop-parts/:id",
+      "handler": "laptop-parts.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/laptop-parts/:id",
+      "handler": "laptop-parts.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

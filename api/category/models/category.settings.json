@@ -28,6 +28,10 @@
     "pc_parts": {
       "via": "categories",
       "collection": "pc-parts"
+    },
+    "laptop_parts": {
+      "via": "categories",
+      "collection": "laptop-parts"
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/intels": {
+    "/brands": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the brands's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve brands document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Intel"
+                    "$ref": "#/components/schemas/Brands"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new brands record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve brands document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Intel"
+                  "$ref": "#/components/schemas/Brands"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIntel"
+                "$ref": "#/components/schemas/NewBrands"
               }
             }
           }
         }
       }
     },
-    "/intels/count": {
+    "/brands/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of brands documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve brands document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "parameters": []
       }
     },
-    "/intels/{id}": {
+    "/brands/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one brands record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve brands document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Intel"
+                  "$ref": "#/components/schemas/Brands"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single brands record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve brands document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Intel"
+                  "$ref": "#/components/schemas/Brands"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIntel"
+                "$ref": "#/components/schemas/NewBrands"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single brands record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single brands based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Brands"
         ],
         "parameters": [
           {
@@ -514,10 +514,16 @@
   },
   "components": {
     "schemas": {
-      "Intel": {
+      "Brands": {
         "required": [
           "id",
-          "title"
+          "title",
+          "brandcpu",
+          "brandmotherdborad",
+          "brandRam",
+          "brandcase",
+          "brandstorge",
+          "brandHeadsets"
         ],
         "properties": {
           "id": {
@@ -526,14 +532,172 @@
           "title": {
             "type": "string"
           },
-          "intel": {
+          "brandcpu": {
             "type": "string",
             "enum": [
-              "i9",
-              "i7",
-              "i5",
-              "i3"
+              "AMD",
+              "intel"
             ]
+          },
+          "brandmotherdborad": {
+            "type": "string",
+            "enum": [
+              "ASRock",
+              "ASUS",
+              "Gigabyte",
+              "MSI"
+            ]
+          },
+          "brandRam": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Corsair",
+              "Crucial",
+              "GSkill",
+              "Gigabyte",
+              "Kingston",
+              "TeamGroup"
+            ]
+          },
+          "brandgpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "ASUS",
+              "Gigabyte",
+              "MSI",
+              "Sapphire",
+              "XFX",
+              "Zotac",
+              "Nivdia"
+            ]
+          },
+          "brandcase": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "Cougar",
+              "Deepcool",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandstorge": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Crucial",
+              "Gigabyte",
+              "Kingston",
+              "Lexar",
+              "QNAP",
+              "Samsung",
+              "Seagate",
+              "TeamGroup",
+              "Transcend",
+              "WesternDigital"
+            ]
+          },
+          "brandHeadsets": {
+            "type": "string",
+            "enum": [
+              "A4tech",
+              "Gigabyte",
+              "HEC",
+              "Kingston",
+              "Logitech",
+              "Microsoft",
+              "MSI",
+              "rapoo",
+              "Redragon"
+            ]
+          },
+          "brandlabtops": {
+            "type": "string",
+            "enum": [
+              "Acer",
+              "Apple",
+              "ASUS",
+              "Dell",
+              "HP",
+              "Lenovo",
+              "MSI",
+              "Toshiba"
+            ]
+          },
+          "coolingSystem": {
+            "type": "string",
+            "enum": [
+              "ASUS",
+              "Bitfenix",
+              "CoolerMaster",
+              "Cougar",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandpowerSupply": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "CoolerMaster",
+              "Corsair",
+              "Cougar",
+              "Gigabyte",
+              "HEC",
+              "RAIDMAX",
+              "Seasonic",
+              "Thermaltake"
+            ]
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "tite",
+                "parts",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tite": {
+                  "type": "string"
+                },
+                "parts": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "brands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           },
           "pc_parts": {
             "type": "array",
@@ -589,22 +753,152 @@
           }
         }
       },
-      "NewIntel": {
+      "NewBrands": {
         "required": [
-          "title"
+          "title",
+          "brandcpu",
+          "brandmotherdborad",
+          "brandRam",
+          "brandcase",
+          "brandstorge",
+          "brandHeadsets"
         ],
         "properties": {
           "title": {
             "type": "string"
           },
-          "intel": {
+          "brandcpu": {
             "type": "string",
             "enum": [
-              "i9",
-              "i7",
-              "i5",
-              "i3"
+              "AMD",
+              "intel"
             ]
+          },
+          "brandmotherdborad": {
+            "type": "string",
+            "enum": [
+              "ASRock",
+              "ASUS",
+              "Gigabyte",
+              "MSI"
+            ]
+          },
+          "brandRam": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Corsair",
+              "Crucial",
+              "GSkill",
+              "Gigabyte",
+              "Kingston",
+              "TeamGroup"
+            ]
+          },
+          "brandgpu": {
+            "type": "string",
+            "enum": [
+              "AMD",
+              "ASUS",
+              "Gigabyte",
+              "MSI",
+              "Sapphire",
+              "XFX",
+              "Zotac",
+              "Nivdia"
+            ]
+          },
+          "brandcase": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "Cougar",
+              "Deepcool",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandstorge": {
+            "type": "string",
+            "enum": [
+              "Adata",
+              "Crucial",
+              "Gigabyte",
+              "Kingston",
+              "Lexar",
+              "QNAP",
+              "Samsung",
+              "Seagate",
+              "TeamGroup",
+              "Transcend",
+              "WesternDigital"
+            ]
+          },
+          "brandHeadsets": {
+            "type": "string",
+            "enum": [
+              "A4tech",
+              "Gigabyte",
+              "HEC",
+              "Kingston",
+              "Logitech",
+              "Microsoft",
+              "MSI",
+              "rapoo",
+              "Redragon"
+            ]
+          },
+          "brandlabtops": {
+            "type": "string",
+            "enum": [
+              "Acer",
+              "Apple",
+              "ASUS",
+              "Dell",
+              "HP",
+              "Lenovo",
+              "MSI",
+              "Toshiba"
+            ]
+          },
+          "coolingSystem": {
+            "type": "string",
+            "enum": [
+              "ASUS",
+              "Bitfenix",
+              "CoolerMaster",
+              "Cougar",
+              "GAMDIAS",
+              "Gigabyte",
+              "MSI",
+              "NZXT",
+              "RAIDMAX",
+              "Thermaltake"
+            ]
+          },
+          "brandpowerSupply": {
+            "type": "string",
+            "enum": [
+              "Bitfenix",
+              "CoolerMaster",
+              "Corsair",
+              "Cougar",
+              "Gigabyte",
+              "HEC",
+              "RAIDMAX",
+              "Seasonic",
+              "Thermaltake"
+            ]
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "pc_parts": {
             "type": "array",
@@ -618,7 +912,7 @@
   },
   "tags": [
     {
-      "name": "Intel"
+      "name": "Brands"
     }
   ]
 }

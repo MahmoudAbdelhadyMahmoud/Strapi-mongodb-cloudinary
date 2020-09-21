@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/intels": {
+    "/laptop-parts": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the laptop-parts's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve laptop-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Intel"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Laptop-parts"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new laptop-parts record",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Intel"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Intel"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewIntel"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/intels/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve laptop-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Laptop-parts"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLaptop-parts"
+              }
+            }
+          }
+        }
       }
     },
-    "/intels/{id}": {
+    "/laptop-parts/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of laptop-parts documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve laptop-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Intel"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Laptop-parts"
+        ],
+        "parameters": []
+      }
+    },
+    "/laptop-parts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one laptop-parts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve laptop-parts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Laptop-parts"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single laptop-parts record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve laptop-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Intel"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Laptop-parts"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewIntel"
+                "$ref": "#/components/schemas/NewLaptop-parts"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single laptop-parts record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single laptop-parts based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Intel"
+          "Laptop-parts"
         ],
         "parameters": [
           {
@@ -514,35 +527,94 @@
   },
   "components": {
     "schemas": {
-      "Intel": {
+      "Laptop-parts": {
         "required": [
           "id",
-          "title"
+          "tite",
+          "parts",
+          "image"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "tite": {
             "type": "string"
           },
-          "intel": {
-            "type": "string",
-            "enum": [
-              "i9",
-              "i7",
-              "i5",
-              "i3"
-            ]
+          "parts": {
+            "type": "string"
           },
-          "pc_parts": {
+          "image": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categories": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "title",
-                "Dec",
-                "image"
+                "images"
               ],
               "properties": {
                 "id": {
@@ -551,34 +623,84 @@
                 "title": {
                   "type": "string"
                 },
-                "Dec": {
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "brands": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "brandcpu",
+                "brandmotherdborad",
+                "brandRam",
+                "brandcase",
+                "brandstorge",
+                "brandHeadsets"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
                 },
-                "image": {
+                "title": {
+                  "type": "string"
+                },
+                "brandcpu": {
+                  "type": "string"
+                },
+                "brandmotherdborad": {
+                  "type": "string"
+                },
+                "brandRam": {
+                  "type": "string"
+                },
+                "brandgpu": {
+                  "type": "string"
+                },
+                "brandcase": {
+                  "type": "string"
+                },
+                "brandstorge": {
+                  "type": "string"
+                },
+                "brandHeadsets": {
+                  "type": "string"
+                },
+                "brandlabtops": {
+                  "type": "string"
+                },
+                "coolingSystem": {
+                  "type": "string"
+                },
+                "brandpowerSupply": {
+                  "type": "string"
+                },
+                "laptop_parts": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "amds": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "intels": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "brands": {
+                "pc_parts": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -589,24 +711,25 @@
           }
         }
       },
-      "NewIntel": {
+      "NewLaptop-parts": {
         "required": [
-          "title"
+          "tite",
+          "parts"
         ],
         "properties": {
-          "title": {
+          "tite": {
             "type": "string"
           },
-          "intel": {
-            "type": "string",
-            "enum": [
-              "i9",
-              "i7",
-              "i5",
-              "i3"
-            ]
+          "parts": {
+            "type": "string"
           },
-          "pc_parts": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "brands": {
             "type": "array",
             "items": {
               "type": "string"
@@ -616,9 +739,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Intel"
-    }
-  ]
+  "tags": []
 }
