@@ -535,14 +535,13 @@
               "i3"
             ]
           },
-          "pc_parts": {
+          "cpus": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "title",
-                "Dec",
-                "image"
+                "info"
               ],
               "properties": {
                 "id": {
@@ -551,16 +550,10 @@
                 "title": {
                   "type": "string"
                 },
-                "Dec": {
+                "info": {
                   "type": "string"
                 },
                 "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -578,7 +571,13 @@
                     "type": "string"
                   }
                 },
-                "brands": {
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -606,7 +605,7 @@
               "i3"
             ]
           },
-          "pc_parts": {
+          "cpus": {
             "type": "array",
             "items": {
               "type": "string"

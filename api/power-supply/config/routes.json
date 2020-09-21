@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/power-supplies",
+      "handler": "power-supply.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/power-supplies/count",
+      "handler": "power-supply.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/power-supplies/:id",
+      "handler": "power-supply.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/power-supplies",
+      "handler": "power-supply.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/power-supplies/:id",
+      "handler": "power-supply.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/power-supplies/:id",
+      "handler": "power-supply.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Store"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phonenumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "LinkWebsite": {
+      "type": "string"
+    },
+    "LinkFacebook": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "time": {
+      "type": "time"
+    },
+    "info": {
+      "type": "richtext"
+    }
+  }
+}

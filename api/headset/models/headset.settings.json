@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "headsets",
+  "info": {
+    "name": "Headset"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "pc_parts": {
+      "via": "headsets",
+      "collection": "pc-parts",
+      "dominant": true
+    },
+    "info": {
+      "type": "richtext"
+    }
+  }
+}

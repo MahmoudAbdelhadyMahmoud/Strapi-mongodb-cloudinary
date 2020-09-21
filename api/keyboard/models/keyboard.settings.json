@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keyboards",
+  "info": {
+    "name": "Keyboard"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "pc_parts": {
+      "via": "keyboards",
+      "collection": "pc-parts",
+      "dominant": true
+    }
+  }
+}

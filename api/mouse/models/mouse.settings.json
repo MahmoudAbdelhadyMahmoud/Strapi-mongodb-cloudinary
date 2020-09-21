@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mice",
+  "info": {
+    "name": "Mouse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "pc_parts": {
+      "via": "mice",
+      "collection": "pc-parts",
+      "dominant": true
+    }
+  }
+}

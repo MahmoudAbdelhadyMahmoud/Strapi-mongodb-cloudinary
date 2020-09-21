@@ -34,10 +34,14 @@
       "via": "laptop_parts",
       "dominant": true
     },
-    "brands": {
+    "Brands": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "cpus": {
       "via": "laptop_parts",
-      "collection": "brands",
-      "dominant": true
+      "collection": "cpu"
     }
   }
 }

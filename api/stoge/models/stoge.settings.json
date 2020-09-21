@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stoges",
+  "info": {
+    "name": "Stoge"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "choose": {
+      "type": "enumeration",
+      "enum": [
+        "HHD",
+        "SSD",
+        "SSHD"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "pc_parts": {
+      "via": "stoges",
+      "collection": "pc-parts",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpus",
+  "info": {
+    "name": "CPU"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "info": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "amds": {
+      "collection": "amd",
+      "via": "cpus",
+      "dominant": true
+    },
+    "intels": {
+      "collection": "intel",
+      "via": "cpus",
+      "dominant": true
+    },
+    "pc_parts": {
+      "via": "cpus",
+      "collection": "pc-parts",
+      "dominant": true
+    },
+    "laptop_parts": {
+      "collection": "laptop-parts",
+      "via": "cpus",
+      "dominant": true
+    }
+  }
+}

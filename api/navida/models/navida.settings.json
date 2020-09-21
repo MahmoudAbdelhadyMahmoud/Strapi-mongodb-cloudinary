@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navidas",
+  "info": {
+    "name": "Navida"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "choose": {
+      "type": "enumeration",
+      "enum": [
+        "RTX",
+        "GTX",
+        "GT"
+      ]
+    },
+    "pc_parts": {
+      "via": "navidas",
+      "collection": "pc-parts",
+      "dominant": true
+    },
+    "laptop_part": {
+      "model": "laptop-parts"
+    }
+  }
+}

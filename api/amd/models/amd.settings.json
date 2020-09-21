@@ -23,9 +23,9 @@
         "Ryzen3"
       ]
     },
-    "pc_parts": {
+    "cpus": {
       "via": "amds",
-      "collection": "pc-parts"
+      "collection": "cpu"
     }
   }
 }

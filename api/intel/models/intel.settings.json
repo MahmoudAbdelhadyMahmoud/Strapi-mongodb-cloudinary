@@ -23,9 +23,9 @@
         "i3"
       ]
     },
-    "pc_parts": {
+    "cpus": {
       "via": "intels",
-      "collection": "pc-parts"
+      "collection": "cpu"
     }
   }
 }

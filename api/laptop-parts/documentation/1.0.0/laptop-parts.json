@@ -532,7 +532,8 @@
           "id",
           "tite",
           "parts",
-          "image"
+          "image",
+          "Brands"
         ],
         "properties": {
           "id": {
@@ -644,12 +645,16 @@
               }
             }
           },
-          "brands": {
+          "Brands": {
+            "type": "string"
+          },
+          "cpus": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "title"
+                "title",
+                "info"
               ],
               "properties": {
                 "id": {
@@ -658,13 +663,34 @@
                 "title": {
                   "type": "string"
                 },
-                "laptop_parts": {
+                "info": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "amds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "intels": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
                 "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -678,7 +704,8 @@
       "NewLaptop-parts": {
         "required": [
           "tite",
-          "parts"
+          "parts",
+          "Brands"
         ],
         "properties": {
           "tite": {
@@ -693,7 +720,10 @@
               "type": "string"
             }
           },
-          "brands": {
+          "Brands": {
+            "type": "string"
+          },
+          "cpus": {
             "type": "array",
             "items": {
               "type": "string"

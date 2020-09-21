@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rams",
+  "info": {
+    "name": "Ram"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "pc_parts": {
+      "via": "rams",
+      "collection": "pc-parts",
+      "dominant": true
+    }
+  }
+}
