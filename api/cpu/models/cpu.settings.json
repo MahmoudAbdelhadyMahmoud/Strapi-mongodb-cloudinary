@@ -29,25 +29,13 @@
       "plugin": "upload",
       "required": false
     },
-    "amds": {
-      "collection": "amd",
-      "via": "cpus",
-      "dominant": true
+    "amd": {
+      "model": "amd",
+      "via": "cpu"
     },
-    "intels": {
-      "collection": "intel",
-      "via": "cpus",
-      "dominant": true
-    },
-    "pc_parts": {
-      "via": "cpus",
-      "collection": "pc-parts",
-      "dominant": true
-    },
-    "laptop_parts": {
-      "collection": "laptop-parts",
-      "via": "cpus",
-      "dominant": true
+    "intel": {
+      "model": "intel",
+      "via": "cpu"
     }
   }
 }

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "stoges",
   "info": {
-    "name": "Stoge"
+    "name": "Storge"
   },
   "options": {
     "increments": true,
@@ -34,11 +34,6 @@
       ],
       "required": true,
       "unique": true
-    },
-    "pc_parts": {
-      "via": "stoges",
-      "collection": "pc-parts",
-      "dominant": true
     }
   }
 }

@@ -25,11 +25,6 @@
       "plugin": "upload",
       "required": true
     },
-    "pc_parts": {
-      "via": "headsets",
-      "collection": "pc-parts",
-      "dominant": true
-    },
     "info": {
       "type": "richtext"
     }

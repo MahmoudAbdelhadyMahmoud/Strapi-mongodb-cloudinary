@@ -23,9 +23,9 @@
         "i3"
       ]
     },
-    "cpus": {
-      "via": "intels",
-      "collection": "cpu"
+    "cpu": {
+      "via": "intel",
+      "model": "cpu"
     }
   }
 }

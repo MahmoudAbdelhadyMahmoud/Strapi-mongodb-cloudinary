@@ -23,9 +23,9 @@
         "Ryzen3"
       ]
     },
-    "cpus": {
-      "via": "amds",
-      "collection": "cpu"
+    "cpu": {
+      "via": "amd",
+      "model": "cpu"
     }
   }
 }

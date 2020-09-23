@@ -29,19 +29,10 @@
       "plugin": "upload",
       "required": true
     },
-    "categories": {
-      "collection": "category",
-      "via": "laptop_parts",
-      "dominant": true
-    },
     "Brands": {
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "cpus": {
-      "via": "laptop_parts",
-      "collection": "cpu"
     }
   }
 }

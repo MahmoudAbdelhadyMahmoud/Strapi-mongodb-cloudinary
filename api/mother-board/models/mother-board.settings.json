@@ -24,11 +24,6 @@
       ],
       "plugin": "upload",
       "required": true
-    },
-    "pc_parts": {
-      "via": "mother_boards",
-      "collection": "pc-parts",
-      "dominant": true
     }
   }
 }

@@ -28,11 +28,6 @@
     "info": {
       "type": "richtext",
       "required": true
-    },
-    "pc_parts": {
-      "via": "power_supplies",
-      "collection": "pc-parts",
-      "dominant": true
     }
   }
 }

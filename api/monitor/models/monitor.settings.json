@@ -28,11 +28,6 @@
     "info": {
       "type": "richtext",
       "required": true
-    },
-    "pc_parts": {
-      "via": "monitors",
-      "collection": "pc-parts",
-      "dominant": true
     }
   }
 }

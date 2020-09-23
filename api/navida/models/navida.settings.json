@@ -21,14 +21,6 @@
         "GTX",
         "GT"
       ]
-    },
-    "pc_parts": {
-      "via": "navidas",
-      "collection": "pc-parts",
-      "dominant": true
-    },
-    "laptop_part": {
-      "model": "laptop-parts"
     }
   }
 }

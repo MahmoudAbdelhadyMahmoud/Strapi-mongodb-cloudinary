@@ -27,11 +27,6 @@
     },
     "info": {
       "type": "richtext"
-    },
-    "pc_parts": {
-      "via": "mice",
-      "collection": "pc-parts",
-      "dominant": true
     }
   }
 }

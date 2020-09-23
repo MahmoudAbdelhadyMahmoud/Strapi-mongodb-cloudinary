@@ -609,95 +609,8 @@
               }
             }
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "images"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "pc_parts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "laptop_parts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "Brands": {
             "type": "string"
-          },
-          "cpus": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "info"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "info": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "amds": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "intels": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "pc_parts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "laptop_parts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           }
         }
       },
@@ -714,20 +627,8 @@
           "parts": {
             "type": "string"
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "Brands": {
             "type": "string"
-          },
-          "cpus": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
