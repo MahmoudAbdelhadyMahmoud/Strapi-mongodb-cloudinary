@@ -562,6 +562,12 @@
               },
               "intel": {
                 "type": "string"
+              },
+              "pc_parts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

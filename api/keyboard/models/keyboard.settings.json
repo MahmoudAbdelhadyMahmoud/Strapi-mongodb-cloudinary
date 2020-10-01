@@ -27,6 +27,10 @@
     },
     "info": {
       "type": "richtext"
+    },
+    "pc_parts": {
+      "via": "keyboards",
+      "collection": "pc-parts"
     }
   }
 }

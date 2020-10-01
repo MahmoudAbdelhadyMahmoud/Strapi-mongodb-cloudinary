@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pc_parts",
+  "info": {
+    "name": "PcParts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "cpuses": {
+      "collection": "cpu",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "gpus": {
+      "collection": "gpu",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "headsets": {
+      "collection": "headset",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "keyboards": {
+      "collection": "keyboard",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "monitors": {
+      "collection": "monitor",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "mother_boards": {
+      "collection": "mother-board",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "storges": {
+      "collection": "stoge",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "mice": {
+      "collection": "mouse",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "power_supplies": {
+      "collection": "power-supply",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "rams": {
+      "collection": "ram",
+      "via": "pc_parts",
+      "dominant": true
+    },
+    "cases": {
+      "collection": "case",
+      "via": "pc_parts",
+      "dominant": true
+    }
+  }
+}

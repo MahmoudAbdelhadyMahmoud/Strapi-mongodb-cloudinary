@@ -39,6 +39,10 @@
       "type": "richtext",
       "required": true,
       "private": false
+    },
+    "pc_parts": {
+      "via": "cases",
+      "collection": "pc-parts"
     }
   }
 }

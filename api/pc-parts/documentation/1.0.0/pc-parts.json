@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/mother-boards": {
+    "/pc-parts": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the pc-parts's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pc-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new pc-parts record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pc-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMother-board"
+                "$ref": "#/components/schemas/NewPc-parts"
               }
             }
           }
         }
       }
     },
-    "/mother-boards/count": {
+    "/pc-parts/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of pc-parts documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pc-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "parameters": []
       }
     },
-    "/mother-boards/{id}": {
+    "/pc-parts/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one pc-parts record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pc-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single pc-parts record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pc-parts document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMother-board"
+                "$ref": "#/components/schemas/NewPc-parts"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single pc-parts record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single pc-parts based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Mother-board"
+          "Pc-parts"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Mother-board": {
+      "Pc-parts": {
         "required": [
           "id",
           "title",
@@ -604,7 +604,110 @@
               }
             }
           },
-          "pc_parts": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "images"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "cpuses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "info": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "amd": {
+                  "type": "string"
+                },
+                "intel": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "gpus": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Title",
+                "image",
+                "info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "headsets": {
             "type": "array",
             "items": {
               "required": [
@@ -625,73 +728,276 @@
                     "type": "string"
                   }
                 },
-                "categories": {
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "keyboards": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "cpuses": {
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "monitors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image",
+                "info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "gpus": {
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "mother_boards": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "headsets": {
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "storges": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image",
+                "choose"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "keyboards": {
+                "choose": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "mice": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "monitors": {
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "power_supplies": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image",
+                "info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "mother_boards": {
+                "info": {
+                  "type": "string"
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "rams": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "storges": {
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image",
+                "choose",
+                "info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "mice": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "choose": {
+                  "type": "string"
                 },
-                "power_supplies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "info": {
+                  "type": "string"
                 },
-                "rams": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cases": {
+                "pc_parts": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -702,7 +1008,7 @@
           }
         }
       },
-      "NewMother-board": {
+      "NewPc-parts": {
         "required": [
           "title"
         ],
@@ -710,7 +1016,73 @@
           "title": {
             "type": "string"
           },
-          "pc_parts": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cpuses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gpus": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "headsets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "keyboards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "monitors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mother_boards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "storges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mice": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "power_supplies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cases": {
             "type": "array",
             "items": {
               "type": "string"

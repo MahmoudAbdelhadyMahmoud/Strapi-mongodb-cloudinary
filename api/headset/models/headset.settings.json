@@ -27,6 +27,10 @@
     },
     "info": {
       "type": "richtext"
+    },
+    "pc_parts": {
+      "via": "headsets",
+      "collection": "pc-parts"
     }
   }
 }

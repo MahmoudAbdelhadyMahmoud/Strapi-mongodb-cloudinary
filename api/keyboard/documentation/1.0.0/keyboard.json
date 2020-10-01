@@ -593,6 +593,102 @@
           },
           "info": {
             "type": "string"
+          },
+          "pc_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cpuses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "gpus": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "headsets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "keyboards": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "monitors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "mother_boards": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "storges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "mice": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "power_supplies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "rams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cases": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -606,6 +702,12 @@
           },
           "info": {
             "type": "string"
+          },
+          "pc_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

@@ -34,6 +34,10 @@
       ],
       "required": true,
       "unique": true
+    },
+    "pc_parts": {
+      "via": "storges",
+      "collection": "pc-parts"
     }
   }
 }

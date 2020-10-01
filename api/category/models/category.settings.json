@@ -24,6 +24,10 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "pc_parts": {
+      "via": "categories",
+      "collection": "pc-parts"
     }
   }
 }

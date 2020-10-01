@@ -36,6 +36,10 @@
     "intel": {
       "model": "intel",
       "via": "cpu"
+    },
+    "pc_parts": {
+      "via": "cpuses",
+      "collection": "pc-parts"
     }
   }
 }
