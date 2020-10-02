@@ -24,17 +24,12 @@
       "plugin": "upload",
       "required": true
     },
-    "categories": {
-      "collection": "category",
-      "via": "pc_parts",
-      "dominant": true
-    },
     "cpuses": {
       "collection": "cpu",
       "via": "pc_parts",
       "dominant": true
     },
-    "gpus": {
+    "gpuses": {
       "collection": "gpu",
       "via": "pc_parts",
       "dominant": true
@@ -83,6 +78,14 @@
       "collection": "case",
       "via": "pc_parts",
       "dominant": true
+    },
+    "fans": {
+      "via": "pc_parts",
+      "collection": "fan"
+    },
+    "categories": {
+      "via": "pc_parts",
+      "collection": "category"
     }
   }
 }

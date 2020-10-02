@@ -604,36 +604,6 @@
               }
             }
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "images"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "pc_parts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "cpuses": {
             "type": "array",
             "items": {
@@ -673,7 +643,7 @@
               }
             }
           },
-          "gpus": {
+          "gpuses": {
             "type": "array",
             "items": {
               "required": [
@@ -1005,6 +975,72 @@
                 }
               }
             }
+          },
+          "fans": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "images"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -1016,19 +1052,13 @@
           "title": {
             "type": "string"
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "cpuses": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "gpus": {
+          "gpuses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -1083,6 +1113,18 @@
             }
           },
           "cases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fans": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "categories": {
             "type": "array",
             "items": {
               "type": "string"

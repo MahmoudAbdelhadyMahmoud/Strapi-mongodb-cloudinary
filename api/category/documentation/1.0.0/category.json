@@ -612,19 +612,13 @@
                     "type": "string"
                   }
                 },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "cpuses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "gpus": {
+                "gpuses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -683,6 +677,56 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "fans": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "laptop_parts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "tite",
+                "parts",
+                "image",
+                "Brands"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tite": {
+                  "type": "string"
+                },
+                "parts": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "Brands": {
+                  "type": "string"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -698,6 +742,12 @@
             "type": "string"
           },
           "pc_parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "laptop_parts": {
             "type": "array",
             "items": {
               "type": "string"

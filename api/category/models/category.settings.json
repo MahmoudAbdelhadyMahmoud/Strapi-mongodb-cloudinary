@@ -26,8 +26,13 @@
       "required": true
     },
     "pc_parts": {
+      "collection": "pc-parts",
       "via": "categories",
-      "collection": "pc-parts"
+      "dominant": true
+    },
+    "laptop_parts": {
+      "via": "categories",
+      "collection": "laptop-parts"
     }
   }
 }

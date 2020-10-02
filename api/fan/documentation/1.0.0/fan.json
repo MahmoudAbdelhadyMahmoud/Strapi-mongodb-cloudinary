@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/monitors": {
+    "/fans": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Monitor"
+                    "$ref": "#/components/schemas/Fan"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Monitor"
+                  "$ref": "#/components/schemas/Fan"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMonitor"
+                "$ref": "#/components/schemas/NewFan"
               }
             }
           }
         }
       }
     },
-    "/monitors/count": {
+    "/fans/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "parameters": []
       }
     },
-    "/monitors/{id}": {
+    "/fans/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Monitor"
+                  "$ref": "#/components/schemas/Fan"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Monitor"
+                  "$ref": "#/components/schemas/Fan"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMonitor"
+                "$ref": "#/components/schemas/NewFan"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Monitor"
+          "Fan"
         ],
         "parameters": [
           {
@@ -514,12 +514,11 @@
   },
   "components": {
     "schemas": {
-      "Monitor": {
+      "Fan": {
         "required": [
           "id",
           "title",
-          "image",
-          "info"
+          "image"
         ],
         "properties": {
           "id": {
@@ -591,9 +590,6 @@
                 }
               }
             }
-          },
-          "info": {
-            "type": "string"
           },
           "pc_parts": {
             "type": "array",
@@ -699,16 +695,12 @@
           }
         }
       },
-      "NewMonitor": {
+      "NewFan": {
         "required": [
-          "title",
-          "info"
+          "title"
         ],
         "properties": {
           "title": {
-            "type": "string"
-          },
-          "info": {
             "type": "string"
           },
           "pc_parts": {
@@ -723,7 +715,7 @@
   },
   "tags": [
     {
-      "name": "Monitor"
+      "name": "Fan"
     }
   ]
 }

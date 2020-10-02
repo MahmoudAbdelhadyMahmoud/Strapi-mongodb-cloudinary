@@ -1,21 +1,16 @@
 {
   "kind": "collectionType",
-  "collectionName": "laptop_parts",
+  "collectionName": "fans",
   "info": {
-    "name": "LaptopParts"
+    "name": "Fan"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "tite": {
+    "title": {
       "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "parts": {
-      "type": "richtext",
       "required": true
     },
     "image": {
@@ -29,14 +24,9 @@
       "plugin": "upload",
       "required": true
     },
-    "Brands": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "categories": {
-      "collection": "category",
-      "via": "laptop_parts",
+    "pc_parts": {
+      "collection": "pc-parts",
+      "via": "fans",
       "dominant": true
     }
   }

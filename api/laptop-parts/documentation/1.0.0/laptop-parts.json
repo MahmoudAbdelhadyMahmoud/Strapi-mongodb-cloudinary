@@ -611,6 +611,42 @@
           },
           "Brands": {
             "type": "string"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "images"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pc_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "laptop_parts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -629,6 +665,12 @@
           },
           "Brands": {
             "type": "string"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

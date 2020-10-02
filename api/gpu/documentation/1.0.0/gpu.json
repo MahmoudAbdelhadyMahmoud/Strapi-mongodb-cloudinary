@@ -616,19 +616,13 @@
                     "type": "string"
                   }
                 },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "cpuses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "gpus": {
+                "gpuses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -683,6 +677,18 @@
                   }
                 },
                 "cases": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fans": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "categories": {
                   "type": "array",
                   "items": {
                     "type": "string"
